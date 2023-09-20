@@ -22,7 +22,6 @@ int main() {
 
         if (strcmp(input_string, name[line_number]) == 0) {
             printf("%s은(는) 파일의 %d번째 줄에 있습니다.\n", input_string, line_number + 1);
-            fclose(file);
             return 0;
         }
 
