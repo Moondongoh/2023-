@@ -22,13 +22,9 @@ int main() {
     while (fgets(line, sizeof(line), file)) {
         lineNumber++;
 
-        char* word = strtok(line, " \t\n"); // 공백 또는 탭을 구분자로 사용하여 단어를 분리
-        while (word != NULL) {
-            if (strcmp(word, searchWord) == 0) {
-                wordCount++;
-                printf("{%d, %d} ", lineNumber, wordCount);
-            }
-            word = strtok(NULL, " \t\n");
+        if (strstr(line, searchWord) != NULL) {
+            wordCount++;
+            printf("{%d, %d} %s", lineNumber, wordCount, line); // 검색된 단어가 있는 라인 출력
         }
     }
 
