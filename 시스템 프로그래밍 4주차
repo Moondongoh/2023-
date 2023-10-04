@@ -7,7 +7,6 @@ int main() {
     char searchWord[1000];
     char line[200];
     int lineNumber = 0;
-    int wordCount = 0;
 
     file = fopen(filename, "r");
 
@@ -22,20 +21,18 @@ int main() {
     while (fgets(line, sizeof(line), file)) {
         lineNumber++;
 
-        if (strstr(line, searchWord) != NULL) {
+        char* word = strtok(line, " \t\n");
+        int wordCount = 0;
+        while (word != NULL) {
             wordCount++;
-            printf("{%d, %d} %s", lineNumber, wordCount, line); // 검색된 단어가 있는 라인 출력
+            if (strcmp(word, searchWord) == 0) {
+                printf("{%d, %d}\n", lineNumber, wordCount);
+            }
+            word = strtok(NULL, " \t\n");
         }
     }
 
     fclose(file);
-
-    if (wordCount == 0) {
-        printf("검색된 단어가 없습니다.\n");
-    }
-    else {
-        printf("\n");
-    }
 
     return 0;
 }
