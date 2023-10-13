@@ -20,7 +20,7 @@ word_dict = {
 }
 choiceWord = random.choice(list(word_dict.keys()))  # wordList에서 랜덤으로 단어 선택
 
-display = "힌트: 대한민국 도시"  # 단어 힌트 제공
+display = "힌트:"+ word_dict[choiceWord]   # 단어 힌트 제공
 
 wordLen = len(choiceWord)  # 선정된 단어의 길이
 
