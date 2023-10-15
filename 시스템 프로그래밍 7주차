@@ -24,11 +24,11 @@ int main() {
     FILE* file = fopen("assembly_code.txt", "r");
     char line[256];
     while (fgets(line, sizeof(line), file)) {
-        printf("Line: %s", line); // 현재 줄 출력
+        printf("\n%s", line); // 현재 줄 출력
         char* word = strtok(line, " ,:\t\n");
         while (word != NULL) {
             char* type = getWordType(word);
-            printf("Word: %s, Type: %s\n", word, type);
+            printf("%s\t",type);
             word = strtok(NULL, " ,:\t\n");
         }
     }
