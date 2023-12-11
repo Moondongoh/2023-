@@ -112,7 +112,6 @@ string PlayFair::makeEncryption(string mEncryption) {
 	mEncryption.erase(std::remove(mEncryption.begin(), mEncryption.end(), '>'), mEncryption.end());
 	mEncryption.erase(std::remove(mEncryption.begin(), mEncryption.end(), '?'), mEncryption.end());
 	cout << "3.특수 문자 제거 :" << mEncryption << endl << endl;
-
 	for (int j = 0; j < mEncryption.length(); j += 2)       // 두자리씩 끊어서 같은지 확인하는데
 	{
 		if (mEncryption[j] == mEncryption[j + 1])           // 두 단어가 같아?
