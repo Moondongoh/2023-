@@ -241,7 +241,6 @@ void PassII(char* buf)
 		}
 		LC += atoi(Instr[i].ins_len);
 	}
-
 	else
 	{
 		k = 0;
