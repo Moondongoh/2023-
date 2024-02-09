@@ -4,7 +4,8 @@
 #include <algorithm>
 using namespace std;
 
-class PlayFair {
+class PlayFair 
+{
    char mTable[25];                                  // 배열생성
    string mPair;                                     // 암호화할 대상이 되는 문자열 예시 assassinator 
    string mKey;                                      // 암호의 키로 사용되는 문자열
