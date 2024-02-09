@@ -18,7 +18,8 @@ public:
    void showTable();                                 // 5x5 행렬 출력 함수.
    string makeEncryption(string mEncryption);        // mEncryption라는 문자열을 받아 PlayFair 암호를 사용하여 암호화하는 함수
 };
-PlayFair::PlayFair(string mKey, string mPair) {       // PlayFair 클래스의 생성자를 정의한다.
+PlayFair::PlayFair(string mKey, string mPair) 
+{       // PlayFair 클래스의 생성자를 정의한다.
    this->mPair = mPair;                              // 생성자의 매개변수 mPair를 클래스의 멤버 변수 mPair에 할당
    this->mKey = mKey;                                // 생성자의 매개변수 mKey를 클래스의 멤버 변수 mKey에 할당
 }
